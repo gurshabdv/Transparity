@@ -1,0 +1,321 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summaryCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.summaryCard h3 {
+  margin: 0 0 1rem 0;
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.amount {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.count {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  background: #f3f4f6;
+  padding: 0.3rem;
+  border-radius: 8px;
+}
+
+.filterBtn {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  color: #374151;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.filterBtn.active {
+  background: white;
+  color: #667eea;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sortSelect {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.sortSelect:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 2px dashed #d1d5db;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.empty h3 {
+  margin: 0 0 0.5rem 0;
+  color: #374151;
+  font-size: 1.3rem;
+}
+
+.empty p {
+  color: #6b7280;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.ledger {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.transaction {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: all 0.2s ease;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transaction:hover {
+  background: #f9fafb;
+}
+
+.transactionIcon {
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.donationIcon,
+.expenseIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.donationIcon {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.expenseIcon {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.transactionContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.transactionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.transactionType {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.transactionType strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.transactionAmount {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.transactionDescription {
+  background: #f8fafc;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  border-left: 3px solid #e2e8f0;
+}
+
+.transactionMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.timestamp {
+  color: #6b7280;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.etherscanLink {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.etherscanLink:hover {
+  background: #f0f4ff;
+  color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters {
+    justify-content: center;
+  }
+
+  .sort {
+    justify-content: center;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .transaction {
+    padding: 1rem;
+  }
+
+  .transactionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .transactionAmount {
+    font-size: 1rem;
+  }
+
+  .transactionMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .transaction {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .transactionIcon {
+    align-self: flex-start;
+    margin-right: 0;
+  }
+
+  .transactionContent {
+    width: 100%;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .filterBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
